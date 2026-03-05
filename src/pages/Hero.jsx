@@ -10,7 +10,7 @@ function Hero() {
     gsap.registerPlugin(ScrollTrigger);
 
     gsap.to(carRef.current, {
-      x: 650,
+      x: 720,
       ease: "none",
       scrollTrigger: {
         trigger: heroRef.current,
@@ -24,27 +24,20 @@ function Hero() {
 
   return (
     <div className="bg-background text-foreground">
-      <div className="h-1/2"></div>
-
       <section
         ref={heroRef}
-       className="h-screen relative flex items-center"
-      >
-        <h1
-         className="absolute left-20 top-57.5 text-[25px]"
-        >
+       className="h-screen relative flex items-center">
+        <h1 className="absolute left-5 items-center text-[11px] md:text-[25px]">
           Ajeetbairwa57@gmail.com
         </h1>
-
+        {/* left-5  md:left-20 md:top-65.5 */}
         <img
           ref={carRef}
           src="/CarTopView.png"
           alt="car"
-          className="absolute left-0 w-100"
-        />
+          className="absolute items-center w-40 md:w-100" />
+          {/* left-0  */}
       </section>
-      <div className="h-1/2"></div>
-
     </div>
   );
 }

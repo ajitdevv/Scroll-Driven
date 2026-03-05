@@ -1,10 +1,9 @@
-import { MoonIcon, SunIcon } from 'lucide-react';
-import React, { useEffect, useState } from 'react'
+import { MoonIcon, SunIcon } from "lucide-react";
+import React, { useEffect, useState } from "react";
 
-const Themetoggle = () => {
-    
-  let [theme, setTheme] = useState(false);
-    useEffect(() => {
+const Themetoggle = ({ theme, setTheme }) => {
+  //   let [theme, setTheme] = useState(false);
+  useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
 
     if (savedTheme === "dark") {
@@ -24,20 +23,24 @@ const Themetoggle = () => {
   }, [theme]);
   return (
     <div className="flex ">
-           <div
-             onClick={() => setTheme(!theme)}
-             className="w-12 h-7 bg-card rounded-full flex items-center px-1 cursor-pointer shadow-(--shadow) transition"
-           >
-             <div
-               className={`size-5 bg-background rounded-full flex items-center justify-center shadow-md transform transition duration-500 ${
-                 theme ? "translate-x-5 rotate-360 " : "translate-x-0"
-               }`}
-             >
-               {theme  ? <MoonIcon  size={15} className='text-foreground' /> : <SunIcon size={15} />}
-             </div>
-           </div>
-         </div>
-  )
-}
+      <div
+        onClick={() => setTheme(!theme)}
+        className="w-12 h-7 bg-card rounded-full flex items-center px-1 cursor-pointer shadow-(--shadow) transition"
+      >
+        <div
+          className={`size-5 bg-background rounded-full flex items-center justify-center shadow-md transform transition duration-500 ${
+            theme ? "translate-x-5 rotate-360 " : "translate-x-0"
+          }`}
+        >
+          {theme ? (
+            <MoonIcon size={15} className="text-foreground" />
+          ) : (
+            <SunIcon size={15} />
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
 
-export default Themetoggle
+export default Themetoggle;
