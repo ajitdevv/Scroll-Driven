@@ -19,7 +19,6 @@
 
 @layer base {
 
-  /* Light mode — Golden Glow */
   :root {
     --background: #ffffff;
     --card: #dcdbdb;
