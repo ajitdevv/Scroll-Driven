@@ -17,7 +17,7 @@ const Nav = () => {
     gsap.from(".Navbar", {
       y: -200,
       opacity: 0,
-      duration: 1,
+      duration: 0.9,
       ease: "power3.out",
     });
 
@@ -46,7 +46,7 @@ const Nav = () => {
       }`}
     >
       <div
-        className={`bg-background/70 shadow-(--shadow) backdrop-blur-xs  flex justify-between items-center text-foreground transition-all duration-700 ${
+        className={`bg-background/50 shadow-(--shadow) backdrop-blur-xs  flex justify-between items-center text-foreground transition-all duration-700 ${
           scrolled ? "p-5 w-full" : "p-3 rounded-2xl  max-w-4xl mx-auto"
         }`}
       >

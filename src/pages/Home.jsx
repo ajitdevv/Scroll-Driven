@@ -8,14 +8,26 @@ const Home = () => {
     gsap.from(".Hometext", {
       y: -40,
       opacity: 0,
-      duration: 2,
-      ease: "power2.out",
+      duration: 0.9,
+      ease: "power3.out",
     });
-      gsap.from(".Homecard", {
-      y: 40,
+      gsap.from(".Homecard1", {
+      y: 300,
       opacity: 0,
-      duration: 2,
-      ease: "power2.out",
+      duration: 0.5,
+      ease: "power3.out",
+    });
+      gsap.from(".Homecard2", {
+      y: 300,
+      opacity: 0,
+      duration: 1,
+      ease: "power3.out",
+    });
+      gsap.from(".Homecard3", {
+      y: 300,
+      opacity: 0,
+      duration: 1.5,
+      ease: "power3.out",
     });
   }, []);
   const cardData = [
@@ -23,19 +35,19 @@ const Home = () => {
       id: 1,
       title: "95%",
       description: "Customer Satisfaction",
-      bgColor: "bg-indigo-500/30",
+      bgColor: "bg-indigo-500/30 Homecard1",
     },
     {
       id: 2,
       title: "2.5x",
       description: "Faster Development",
-      bgColor: "bg-amber-500/30",
+      bgColor: "bg-amber-500/30 Homecard2",
     },
     {
       id: 3,
       title: "120+",
       description: "Projects Completed",
-      bgColor: "bg-emerald-500/30",
+      bgColor: "bg-emerald-500/30 Homecard3",
     },
   ];
   return (
